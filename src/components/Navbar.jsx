@@ -5,7 +5,7 @@ const Navbar = () => {
   const NavBarItems = [
     { menu: "Home", path: "/" },
     {
-      menu: "Props Main",
+      menu: "Reverse Prop Drilling",
       path: "#",
       subMenu: [
         { menu: "Props Child 1", path: "/propsc1" },
@@ -19,7 +19,26 @@ const Navbar = () => {
       menu: "UseState",
       path: "#",
       subMenu: [
-        { menu: "BgChange", path: "/bgChange" }
+        { menu: "BgChange", path: "/bgChange" },
+        { menu: "useState1", path: "/useState1" }
+      ],
+    },
+    {
+      menu: "UseEffect",
+      path: "#",
+      subMenu: [
+        { menu: "useEffect1", path: "/useEffect1" }
+      ],
+    },
+    {
+      menu: "UseContext",
+      path: "#",
+      subMenu: [
+        { menu: "useContext1", path: "/useContext1" },
+        { menu: "useContext2", path: "/useContext2" },
+        { menu: "useContext3", path: "/useContext3" },
+        { menu: "useContext4", path: "/useContext4" },
+        { menu: "useContext5", path: "/useContext5" }
       ],
     },
   ];
@@ -27,7 +46,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Hooks</a>
+        <a className="navbar-brand" href="/">Hooks</a>
         <button
           className="navbar-toggler"
           type="button"
@@ -47,7 +66,7 @@ const Navbar = () => {
                   <>
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
+                      href="/"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
@@ -58,7 +77,7 @@ const Navbar = () => {
                       {item.subMenu.map((subItem, subIndex) => (
                         <li key={subIndex}>
                           <NavLink 
-                            className="dropdown-item" 
+                            className="dropdown-item"
                             to={subItem.path}
                             end
                           >
