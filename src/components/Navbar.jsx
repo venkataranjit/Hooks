@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   const NavBarItems = [
     { menu: "Home", path: "/" },
+    { menu: "Props", path: "/propsParent" },
     {
       menu: "Reverse Prop Drilling",
       path: "#",
@@ -20,7 +21,9 @@ const Navbar = () => {
       path: "#",
       subMenu: [
         { menu: "BgChange", path: "/bgChange" },
-        { menu: "useState1", path: "/useState1" }
+        { menu: "useState1", path: "/useState1" },
+        { menu: "useState2", path: "/useState2" },
+        { menu: "useState3", path: "/useState3" }
       ],
     },
     {
@@ -39,6 +42,41 @@ const Navbar = () => {
         { menu: "useContext3", path: "/useContext3" },
         { menu: "useContext4", path: "/useContext4" },
         { menu: "useContext5", path: "/useContext5" }
+      ],
+    },
+    {
+      menu: "UseRef",
+      path: "#",
+      subMenu: [
+        { menu: "useRef1", path: "/useRef1" },
+        { menu: "useRef2", path: "/useRef2" },
+        { menu: "useRef3", path: "/useRef3" }
+      ],
+    },
+    {
+      menu: "UseMemo",
+      path: "#",
+      subMenu: [
+        { menu: "useMemo1", path: "/useMemo1" },
+        { menu: "useMemo2", path: "/useMemo2" }
+      ],
+    },
+    {
+      menu: "UseCallBack",
+      path: "#",
+      subMenu: [
+        { menu: "useCallBack1", path: "/useCallBack1" },
+        { menu: "useCallBack2", path: "/useCallBack2" }
+      ],
+    },
+    { menu: "Use Reducer", path: "useReducer" },
+    {
+      menu: "Custom Hook",
+      path: "#",
+      subMenu: [
+        { menu: "customeHooks", path: "/customeHooks" },
+        { menu: "customeHooks2", path: "/customeHooks2" },
+        { menu: "customeHooks3", path: "/customeHooks3" }
       ],
     },
   ];
@@ -68,7 +106,7 @@ const Navbar = () => {
                       className="nav-link dropdown-toggle"
                       href="/"
                       role="button"
-                      data-bs-toggle="dropdown"
+                      data-bs-toggle= "dropdown"
                       aria-expanded="false"
                     >
                       {item.menu}

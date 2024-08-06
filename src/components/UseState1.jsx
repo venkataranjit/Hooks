@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
 const UseState1 = () => {
+  const defaultValues = [{name:"ranjit", age:25},{name:"ranjit", age:25}];
   const [name, setName] = useState("ranjit");
   const [flag, setFlag] = useState(false);
   const [step, setStep] = useState(0);
   const [name2, setName2] = useState("");
-  const [arrName, setArrName] = useState([]);
+  const [arrName, setArrName] = useState([...defaultValues]);
+  const [error, setError] = useState("");
   console.log(setName); // to ignore error
+
   const clickHandler = () => {
     setFlag(!flag);
   };
@@ -26,9 +29,14 @@ const UseState1 = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setArrName([...arrName, {id: arrName.length, name:name2}]);
+    if (name2.length > 0) {
+      setError("");
+      setArrName([...arrName, { id: arrName.length, name: name2 }]);
+    } else {
+      setError("Enter Any Thing to Render");
+    }
     setName2("");
-  } 
+  };
 
   return (
     <>
@@ -44,16 +52,17 @@ const UseState1 = () => {
       </div>
       <hr />
       <form onSubmit={submitHandler}>
-        <input type="text" value={name2} onChange={(e)=>setName2(e.target.value)} />
+        <input
+          type="text"
+          value={name2}
+          onChange={(e) => setName2(e.target.value)}
+        />
         <button type="submit">Add Names</button>
       </form>
-      {
-        arrName.map((item, index)=>(
-          <li key={index}>
-            {item.name}
-          </li>
-        ))
-      }
+      <p>{error}</p>
+      {arrName.map((item, index) => (
+        <li key={index}>{item.name}</li>
+      ))}
     </>
   );
 };

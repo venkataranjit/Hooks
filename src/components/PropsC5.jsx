@@ -13,7 +13,7 @@ const PropsC5 = ({callBackData}) => {
   return (
    <>
     <h5>Props 5</h5>
-
+    <h3>This is propsC5 : {prp5}</h3>
    </>
   )
 }

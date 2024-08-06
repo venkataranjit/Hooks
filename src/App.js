@@ -11,20 +11,36 @@ import "./App.scss";
 import Footer from "./components/Footer";
 import BgChange from "./components/BgChange";
 import UseState1 from "./components/UseState1";
+import UseState2 from "./components/UseState2";
+import UseState3 from "./components/UseState3";
 import UseEffect1 from "./components/UseEffect1";
 import UseContext1 from "./components/UseContext1";
 import UseContext2 from "./components/UseContext2";
 import UseContext3 from "./components/UseContext3";
 import UseContext4 from "./components/UseContext4";
 import UseContext5 from "./components/UseContext5";
-import { CounterProvider } from "./components/CounterContext";
+import UseRef1 from "./components/UseRef1";
+import UseRef2 from "./components/UseRef2";
+import UseRef3 from "./components/UseRef3";
+import UseMemo1 from "./components/UseMemo1";
+import UseMemo2 from "./components/UseMemo2";
+import UseCallBack1 from "./components/UseCallBack1";
+import UseCallBack2 from "./components/UseCallBack2";
+import UseReducer from "./components/UseReducer";
+import CustomeHooks from "./components/CustomeHooks";
+import CustomeHooks2 from "./components/CustomeHooks2";
+import CustomeHooks3 from "./components/CustomeHooks3";
+import LocationDisplay from "./components/LocationDisplay";
 import PageTracker from "./components/PageTracker";
+import { CounterProvider } from "./components/CounterContext";
+import PropsParent from "./components/PropsParent";
 
 function App() {
   return (
     <>
       <CounterProvider>
         <Router>
+          <LocationDisplay />
           <Navbar />
           <div className="container">
             <PageTracker />
@@ -37,12 +53,26 @@ function App() {
               <Route path="/propsc5" element={<PropsC5 />} />
               <Route path="/BgChange" element={<BgChange />} />
               <Route path="/UseState1" element={<UseState1 />} />
+              <Route path="/UseState2" element={<UseState2 />} />
+              <Route path="/UseState3" element={<UseState3 />} />
               <Route path="/UseEffect1" element={<UseEffect1 />} />
               <Route path="/useContext1" element={<UseContext1 />} />
               <Route path="/useContext2" element={<UseContext2 />} />
               <Route path="/useContext3" element={<UseContext3 />} />
               <Route path="/useContext4" element={<UseContext4 />} />
               <Route path="/useContext5" element={<UseContext5 />} />
+              <Route path="/useRef1" element={<UseRef1 />} />
+              <Route path="/useRef2" element={<UseRef2 />} />
+              <Route path="/useRef3" element={<UseRef3 />} />
+              <Route path="/useMemo1" element={<UseMemo1 />} />
+              <Route path="/useMemo2" element={<UseMemo2 />} />
+              <Route path="/useCallBack1" element={<UseCallBack1 />} />
+              <Route path="/useCallBack2" element={<UseCallBack2 />} />
+              <Route path="/useReducer" element={<UseReducer />} />
+              <Route path="/customeHooks" element={<CustomeHooks />} />
+              <Route path="/customeHooks2" element={<CustomeHooks2 />} />
+              <Route path="/customeHooks3" element={<CustomeHooks3 />} />
+              <Route path="/propsParent" element={<PropsParent />} />
             </Routes>
             <PageTracker />
           </div>
