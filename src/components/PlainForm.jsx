@@ -5,20 +5,20 @@ const PlainForm = () => {
   return (
     <>
       <div className="container">
-          <h5 id="title" className="text-center">
-            Simple Form
-          </h5>
+        <h5 id="title" className="text-center">
+          Simple Form <span><small style={{fontSize: "10px"}}>Captcha and Validation</small></span>
+        </h5>
 
         <div className="form-wrap">
           <form id="survey-form">
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-4">
                 <div className="form-group">
                   <label id="name-label" htmlFor="name">
                     Name
-                  </label>
+                  </label> 
                   <input
-                    type="text"
+                    type="text" 
                     name="name"
                     id="name"
                     placeholder="Enter your name"
@@ -27,7 +27,7 @@ const PlainForm = () => {
                   />
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-4">
                 <div className="form-group">
                   <label id="email-label" htmlFor="email">
                     Email
@@ -42,10 +42,7 @@ const PlainForm = () => {
                   />
                 </div>
               </div>
-            </div>
-
-            <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-4">
                 <div className="form-group">
                   <label id="number-label" htmlFor="number">
                     Age <small>(optional)</small>
@@ -61,7 +58,24 @@ const PlainForm = () => {
                   />
                 </div>
               </div>
-              <div className="col-md-6">
+            </div>
+
+            <div className="row">
+              <div className="col-md-4">
+                <div className="form-group">
+                  <label id="number-label" htmlFor="number">
+                    Date <small>(DOB)</small>
+                  </label>
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    className="form-control"
+                    placeholder="DOB"
+                  />
+                </div>
+              </div>
+              <div className="col-md-4">
                 <div className="form-group">
                   <label>current role</label>
                   <select
@@ -79,6 +93,14 @@ const PlainForm = () => {
                     <option value="preferNo">Prefer not to say</option>
                     <option value="other">Other</option>
                   </select>
+                </div>
+              </div>
+              <div className="col-sm-4">
+                <div className="form-group">
+                  <label for="customRange1" class="form-label">
+                    Example range
+                  </label>
+                  <input type="range" class="form-range" id="customRange1" />
                 </div>
               </div>
             </div>
@@ -198,12 +220,13 @@ const PlainForm = () => {
                   id="submit"
                   className="btn btn-primary btn-block"
                 >
-                  Submit Survey
+                  Submit
                 </button>
               </div>
             </div>
           </form>
         </div>
+        
       </div>
     </>
   );
