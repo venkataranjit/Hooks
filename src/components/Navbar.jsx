@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const NavBarItems = [
@@ -23,15 +23,13 @@ const Navbar = () => {
         { menu: "BgChange", path: "/bgChange" },
         { menu: "useState1", path: "/useState1" },
         { menu: "useState2", path: "/useState2" },
-        { menu: "useState3", path: "/useState3" }
+        { menu: "useState3", path: "/useState3" },
       ],
     },
     {
       menu: "UseEffect",
       path: "#",
-      subMenu: [
-        { menu: "useEffect1", path: "/useEffect1" }
-      ],
+      subMenu: [{ menu: "useEffect1", path: "/useEffect1" }],
     },
     {
       menu: "UseContext",
@@ -41,7 +39,7 @@ const Navbar = () => {
         { menu: "useContext2", path: "/useContext2" },
         { menu: "useContext3", path: "/useContext3" },
         { menu: "useContext4", path: "/useContext4" },
-        { menu: "useContext5", path: "/useContext5" }
+        { menu: "useContext5", path: "/useContext5" },
       ],
     },
     {
@@ -50,7 +48,7 @@ const Navbar = () => {
       subMenu: [
         { menu: "useRef1", path: "/useRef1" },
         { menu: "useRef2", path: "/useRef2" },
-        { menu: "useRef3", path: "/useRef3" }
+        { menu: "useRef3", path: "/useRef3" },
       ],
     },
     {
@@ -58,7 +56,7 @@ const Navbar = () => {
       path: "#",
       subMenu: [
         { menu: "useMemo1", path: "/useMemo1" },
-        { menu: "useMemo2", path: "/useMemo2" }
+        { menu: "useMemo2", path: "/useMemo2" },
       ],
     },
     {
@@ -66,25 +64,45 @@ const Navbar = () => {
       path: "#",
       subMenu: [
         { menu: "useCallBack1", path: "/useCallBack1" },
-        { menu: "useCallBack2", path: "/useCallBack2" }
+        { menu: "useCallBack2", path: "/useCallBack2" },
       ],
     },
-    { menu: "Use Reducer", path: "useReducer" },
+    {
+      menu: "Use Reducer",
+      path: "#",
+      subMenu: [
+        { menu: "Use Reducer1", path: "/useReducer1" },
+        { menu: "Use Reducer2", path: "/useReducer2" },
+        { menu: "Use Reducer3", path: "/useReducer3" },
+      ],
+    },
     {
       menu: "Custom Hook",
       path: "#",
       subMenu: [
         { menu: "customeHooks", path: "/customeHooks" },
         { menu: "customeHooks2", path: "/customeHooks2" },
-        { menu: "customeHooks3", path: "/customeHooks3" }
+        { menu: "customeHooks3", path: "/customeHooks3" },
       ],
     },
+    {
+      menu: "Forms",
+      path: "#",
+      subMenu: [
+        { menu: "Plain Form", path: "/plainform" },
+        { menu: "Plain Form Code", path: "/plainformcode" },
+        { menu: "Designed Form", path: "/designedform" },
+        { menu: "Designed Form Code", path: "/designedformcode" },
+      ],
+    }
   ];
 
   return (
     <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">Hooks</a>
+        <a className="navbar-brand" href="/">
+          Hooks
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -99,14 +117,17 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             {NavBarItems.map((item, index) => (
-              <li key={index} className={`nav-item ${item.subMenu ? "dropdown" : ""}`}>
+              <li
+                key={index}
+                className={`nav-item ${item.subMenu ? "dropdown" : ""}`}
+              >
                 {item.subMenu ? (
                   <>
                     <a
                       className="nav-link dropdown-toggle"
                       href="/"
                       role="button"
-                      data-bs-toggle= "dropdown"
+                      data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       {item.menu}
@@ -114,7 +135,7 @@ const Navbar = () => {
                     <ul className="dropdown-menu">
                       {item.subMenu.map((subItem, subIndex) => (
                         <li key={subIndex}>
-                          <NavLink 
+                          <NavLink
                             className="dropdown-item"
                             to={subItem.path}
                             end
