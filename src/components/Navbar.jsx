@@ -49,6 +49,7 @@ const Navbar = () => {
         { menu: "useRef1", path: "/useRef1" },
         { menu: "useRef2", path: "/useRef2" },
         { menu: "useRef3", path: "/useRef3" },
+        { menu: "useRef4", path: "/useRef4" },
       ],
     },
     {
@@ -74,6 +75,9 @@ const Navbar = () => {
         { menu: "Use Reducer1", path: "/useReducer1" },
         { menu: "Use Reducer2", path: "/useReducer2" },
         { menu: "Use Reducer3", path: "/useReducer3" },
+        { menu: "Use Reducer4", path: "/useReducer4" },
+        { menu: "Use Reducer5", path: "/useReducer5" },
+        { menu: "Use Reducer6", path: "/useReducer6" },
       ],
     },
     {
