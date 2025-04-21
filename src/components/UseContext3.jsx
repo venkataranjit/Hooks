@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import UseContext4 from './UseContext4';
-import { CounterContext } from './CounterContext'; 
+import { CounterContext } from '../Context/CounterContext'; 
 
 const UseContext3 = () => {
   const { counter, decrementCounter } = useContext(CounterContext);

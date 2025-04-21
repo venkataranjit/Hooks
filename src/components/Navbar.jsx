@@ -4,6 +4,12 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const NavBarItems = [
     { menu: "Home", path: "/" },
+    { menu: "Router Hooks",
+      path: "#",
+      subMenu: [
+        {menu: "Use Navigate", path: "/usenavigate"},
+      ],
+    },
     { menu: "Props", path: "/propsParent" },
     {
       menu: "Reverse Prop Drilling",
@@ -40,6 +46,7 @@ const Navbar = () => {
         { menu: "useContext3", path: "/useContext3" },
         { menu: "useContext4", path: "/useContext4" },
         { menu: "useContext5", path: "/useContext5" },
+        { menu: "useContext UserContext", path: "/useContextuserContext" },
       ],
     },
     {
@@ -49,7 +56,6 @@ const Navbar = () => {
         { menu: "useRef1", path: "/useRef1" },
         { menu: "useRef2", path: "/useRef2" },
         { menu: "useRef3", path: "/useRef3" },
-        { menu: "useRef4", path: "/useRef4" },
       ],
     },
     {
@@ -75,9 +81,6 @@ const Navbar = () => {
         { menu: "Use Reducer1", path: "/useReducer1" },
         { menu: "Use Reducer2", path: "/useReducer2" },
         { menu: "Use Reducer3", path: "/useReducer3" },
-        { menu: "Use Reducer4", path: "/useReducer4" },
-        { menu: "Use Reducer5", path: "/useReducer5" },
-        { menu: "Use Reducer6", path: "/useReducer6" },
       ],
     },
     {
@@ -93,7 +96,8 @@ const Navbar = () => {
       menu: "Forms",
       path: "#",
       subMenu: [
-        { menu: "Plain Form", path: "/plainform" },
+        { menu: "Survey Form", path: "/plainform" },
+        { menu: "Survey Form Data", path: "/plainformdata" },
         { menu: "Plain Form Code", path: "/plainformcode" },
         { menu: "Designed Form", path: "/designedform" },
         { menu: "Designed Form Code", path: "/designedformcode" },
