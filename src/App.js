@@ -24,6 +24,7 @@ import UseContextUser from "./components/UseContextUser";
 import UseRef1 from "./components/UseRef1";
 import UseRef2 from "./components/UseRef2";
 import UseRef3 from "./components/UseRef3";
+import Zoom from "./components/Zoom";
 import UseMemo1 from "./components/UseMemo1";
 import UseMemo2 from "./components/UseMemo2";
 import UseCallBack1 from "./components/UseCallBack1";
@@ -80,6 +81,7 @@ function App() {
                 <Route path="/useRef1" element={<UseRef1 />} />
                 <Route path="/useRef2" element={<UseRef2 />} />
                 <Route path="/useRef3" element={<UseRef3 />} />
+                <Route path="/zoom" element={<Zoom />} />
                 <Route path="/useMemo1" element={<UseMemo1 />} />
                 <Route path="/useMemo2" element={<UseMemo2 />} />
                 <Route path="/useCallBack1" element={<UseCallBack1 />} />

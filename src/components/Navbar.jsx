@@ -4,11 +4,10 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const NavBarItems = [
     { menu: "Home", path: "/" },
-    { menu: "Router Hooks",
+    {
+      menu: "Router Hooks",
       path: "#",
-      subMenu: [
-        {menu: "Use Navigate", path: "/usenavigate"},
-      ],
+      subMenu: [{ menu: "Use Navigate", path: "/usenavigate" }],
     },
     { menu: "Props", path: "/propsParent" },
     {
@@ -56,6 +55,7 @@ const Navbar = () => {
         { menu: "useRef1", path: "/useRef1" },
         { menu: "useRef2", path: "/useRef2" },
         { menu: "useRef3", path: "/useRef3" },
+        { menu: "zoom", path: "/zoom" },
       ],
     },
     {
@@ -102,7 +102,7 @@ const Navbar = () => {
         { menu: "Designed Form", path: "/designedform" },
         { menu: "Designed Form Code", path: "/designedformcode" },
       ],
-    }
+    },
   ];
 
   return (
